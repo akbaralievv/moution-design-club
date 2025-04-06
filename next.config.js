@@ -28,6 +28,14 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  async rewrites() {
+    return [
+      {
+        source: '/old-route',
+        destination: '/new-route',
+      },
+    ];
+  },
 };
 
 // Handle the case where the app is deployed on Netlify
